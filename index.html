@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Pakistan 🇵🇰 | Official Tourism & Travel Portal</title>
+  <meta name="description" content="Discover the Beauty of Pakistan. Explore amazing cities like Karachi, Lahore, and Islamabad, majestic Karakoram mountain peaks, luxury heritage hotels, and rich cultural adventures.">
+  <meta name="keywords" content="Pakistan tourism, Karachi, Lahore, Islamabad, Hunza, Skardu, Pakistani culture, travel guide, travel budget calculator, Badshahi Mosque, Faisal Mosque">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Explore Pakistan 🇵🇰 - Discover the Beauty of Pakistan">
+  <meta property="og:description" content="Explore Amazing Cities, Beautiful Landscapes and Unforgettable Adventures in Pakistan.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇵🇰</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       TOP ANNOUNCEMENT BAR
+       ========================================================================= -->
+  <div class="top-announcement">
+    <div class="container top-bar-inner">
+      <div class="announcement-text">
+        <span class="badge-pulse">Online Visa</span>
+        <span>Pakistan Tourist E-Visa is now available online for 191 nations with fast 48h processing!</span>
+      </div>
+      <div class="top-bar-actions">
+        <button class="currency-picker" id="currencyToggleBtn" title="Switch Currency (PKR / USD)">
+          <span>💱</span>
+          <span id="currentCurrencyLabel">PKR (₨)</span>
+        </button>
+        <a href="#guide" class="top-link">
+          <span>🛂</span> Visa Guide
+        </a>
+        <a href="#contact" class="top-link">
+          <span>📞</span> 24/7 Tourist Helpline (1422)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="#home" class="brand-logo" aria-label="Explore Pakistan Homepage">
+          <div class="logo-badge">🇵🇰</div>
+          <div class="brand-text">Explore<span>Pakistan</span></div>
+        </a>
+
+        <!-- Desktop Navigation Links (All 7 Website Pages/Sections) -->
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#cities" class="nav-link">Cities</a></li>
+          <li><a href="#destinations" class="nav-link">Destinations</a></li>
+          <li><a href="#hotels" class="nav-link">Hotels</a></li>
+          <li><a href="#calculator" class="nav-link">Budget Calculator</a></li>
+          <li><a href="#guide" class="nav-link">Travel Guide</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Navigation Actions -->
+        <div class="nav-actions">
+          <!-- Wishlist / Saved Places Button -->
+          <button class="icon-btn" id="openWishlistBtn" title="Saved Places Wishlist" aria-label="View Saved Places">
+            <span>❤️</span>
+            <span class="icon-badge" id="wishlistCounter">0</span>
+          </button>
+
+          <!-- Plan Trip CTA -->
+          <a href="#calculator" class="btn btn-primary nav-cta-btn">
+            <span>✨</span> Plan My Trip
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-header">
+      <div class="brand-logo">
+        <div class="logo-badge">🇵🇰</div>
+        <div class="brand-text">Explore<span>Pakistan</span></div>
+      </div>
+      <button class="modal-close-btn" id="closeMobileNavBtn" style="position:static;">✕</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="mobile-nav-link active"><span>🏠</span> Home</a></li>
+      <li><a href="#cities" class="mobile-nav-link"><span>🏙️</span> Pakistani Cities</a></li>
+      <li><a href="#destinations" class="mobile-nav-link"><span>🏔️</span> Top Destinations</a></li>
+      <li><a href="#hotels" class="mobile-nav-link"><span>🏨</span> Hotels & Resorts</a></li>
+      <li><a href="#calculator" class="mobile-nav-link"><span>💰</span> Budget Calculator</a></li>
+      <li><a href="#guide" class="mobile-nav-link"><span>🗺️</span> Travel Guide</a></li>
+      <li><a href="#gallery" class="mobile-nav-link"><span>📸</span> Photo Gallery</a></li>
+      <li><a href="#reviews" class="mobile-nav-link"><span>💬</span> Traveler Reviews</a></li>
+      <li><a href="#about" class="mobile-nav-link"><span>ℹ️</span> About Us</a></li>
+      <li><a href="#contact" class="mobile-nav-link"><span>✉️</span> Contact Us</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <a href="#calculator" class="btn btn-primary" style="width:100%;">
+        Plan Your Pakistan Tour
+      </a>
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer -->
+  <aside class="wishlist-drawer" id="wishlistDrawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Saved Wishlist ❤️</h3>
+      <button class="modal-close-btn" id="closeWishlistBtn" style="position:static;">✕</button>
+    </div>
+    <div class="drawer-body" id="wishlistDrawerBody">
+      <!-- Populated dynamically via JS -->
+    </div>
+    <div class="drawer-footer">
+      <a href="#calculator" class="btn btn-primary" style="width:100%;" onclick="document.getElementById('wishlistDrawer').classList.remove('open')">
+        Calculate Trip Cost for Saved Places
+      </a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       1. HOMEPAGE & HERO SECTION
+       ========================================================================= -->
+  <section class="hero-section" id="home">
+    <!-- Background Image Slider -->
+    <div class="hero-slider">
+      <!-- Slide 1: Hunza Valley / Passu Cones -->
+      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1920&q=80');"></div>
+      <!-- Slide 2: Badshahi Mosque, Lahore -->
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=1920&q=80');"></div>
+      <!-- Slide 3: Faisal Mosque, Islamabad -->
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1627894006066-b457002016cb?auto=format&fit=crop&w=1920&q=80');"></div>
+      <!-- Slide 4: Attabad Lake Glacial Waters -->
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');"></div>
+    </div>
+
+    <!-- Dark Gradient Overlay -->
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span>🇵🇰</span> Gateway to Ancient Civilizations & Karakoram Giants
+        </div>
+
+        <h1 class="hero-heading">
+          Discover the Beauty of <span>Pakistan</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Explore Amazing Cities, Beautiful Landscapes and Unforgettable Adventures.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#cities" class="btn btn-primary" style="padding:0.85rem 1.85rem; font-size:1.05rem;">
+            Explore Now ➔
+          </a>
+          <a href="#calculator" class="btn btn-outline-white" style="padding:0.85rem 1.6rem;">
+            <span>💰</span> Estimate Travel Budget
+          </a>
+          <a href="#guide" class="btn btn-outline-white" style="padding:0.85rem 1.6rem;">
+            <span>📘</span> E-Visa Guide
+          </a>
+        </div>
+
+        <!-- Destination Search Bar Component -->
+        <div class="hero-search-wrapper">
+          <div class="search-form-grid">
+            <div class="search-field">
+              <label for="heroSearchInput"><span>🔍</span> Search Destinations / Attractions</label>
+              <div class="search-input-group">
+                <input type="text" id="heroSearchInput" placeholder="Try 'Lahore Fort', 'Hunza', 'Clifton'..." autocomplete="off">
+              </div>
+              <!-- Live Autocomplete Dropdown -->
+              <div class="search-dropdown-results" id="searchDropdown"></div>
+            </div>
+
+            <div class="search-field">
+              <label for="heroCategorySelect"><span>🏷️</span> Experience Type</label>
+              <div class="search-input-group">
+                <select id="heroCategorySelect">
+                  <option value="all">All Experiences</option>
+                  <option value="cities">Historic Cities</option>
+                  <option value="mountains">Mountain Valleys</option>
+                  <option value="lakes">Glacial Lakes</option>
+                  <option value="coastal">Arabian Beaches</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="search-field">
+              <label for="heroRegionSelect"><span>📍</span> Province / Region</label>
+              <div class="search-input-group">
+                <select id="heroRegionSelect">
+                  <option value="all">Entire Pakistan</option>
+                  <option value="punjab">Punjab (Lahore, Multan, Faisalabad, Murree)</option>
+                  <option value="sindh">Sindh (Karachi)</option>
+                  <option value="islamabad">Islamabad Capital</option>
+                  <option value="gilgit">Gilgit-Baltistan (Skardu, Hunza)</option>
+                  <option value="kpk">KPK (Peshawar, Swat)</option>
+                  <option value="balochistan">Balochistan (Quetta)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="search-field search-btn-field">
+              <label style="opacity:0;">Search</label>
+              <button class="btn btn-primary" id="heroSearchBtn" style="padding:0.75rem 1.5rem; height:46px;">
+                <span>Explore</span> ➔
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Dots -->
+    <div class="hero-slider-controls">
+      <div class="slider-dot active" title="Passu Cones"></div>
+      <div class="slider-dot" title="Badshahi Mosque"></div>
+      <div class="slider-dot" title="Faisal Mosque"></div>
+      <div class="slider-dot" title="Attabad Lake"></div>
+    </div>
+  </section>
+
+  <!-- Quick Tourism Statistics Strip -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">5 of 14</div>
+          <div class="stat-label">World's 8000m+ Peaks (inc. K2)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5,000+</div>
+          <div class="stat-label">Years of Indus Heritage & History</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">191</div>
+          <div class="stat-label">Nations Eligible for E-Visa</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">#1</div>
+          <div class="stat-label">World Destination (Condé Nast)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       2. EXPLORE PAKISTANI CITIES
+       ========================================================================= -->
+  <section class="section section-alt" id="cities">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-badge"><span>🏙️</span> Legendary Metropolises & Valleys</div>
+        <h2 class="section-title">Explore <span>Pakistani Cities</span></h2>
+        <p class="section-subtitle">
+          From the vibrant Arabian Sea coastline of Karachi to the regal Mughal splendors of Lahore, the serene green capital Islamabad, the Silk Road heritage of Peshawar, and the alpine wonderlands of Skardu, Hunza & Swat.
+        </p>
+      </header>
+
+      <!-- Verified City Region Filter Tabs -->
+      <div class="filter-tabs-wrapper" id="cityFilterTabs">
+        <button class="filter-tab-btn city-tab-btn active" data-city-filter="all">All Cities (10)</button>
+        <button class="filter-tab-btn city-tab-btn" data-city-filter="top3">⭐ Top 3 (Karachi, Lahore, Islamabad)</button>
+        <button class="filter-tab-btn city-tab-btn" data-city-filter="Punjab">Punjab</button>
+        <button class="filter-tab-btn city-tab-btn" data-city-filter="Sindh">Sindh</button>
+        <button class="filter-tab-btn city-tab-btn" data-city-filter="Islamabad Capital Territory">Islamabad</button>
+        <button class="filter-tab-btn city-tab-btn" data-city-filter="Khyber Pakhtunkhwa">KPK (Peshawar & Swat)</button>
+        <button class="filter-tab-btn city-tab-btn" data-city-filter="Gilgit-Baltistan">Gilgit-Baltistan (Skardu & Hunza)</button>
+        <button class="filter-tab-btn city-tab-btn" data-city-filter="Balochistan">Balochistan (Quetta)</button>
+      </div>
+
+      <!-- City Cards Grid -->
+      <div class="cities-grid" id="citiesCardsContainer">
+        <!-- Rendered dynamically by app.js from PAKISTAN_DATA.cities -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. TOP DESTINATIONS PAGE / SECTION
+       ========================================================================= -->
+  <section class="section" id="destinations">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-badge"><span>🏔️</span> Unrivaled Landscapes</div>
+        <h2 class="section-title">Iconic <span>Destinations</span> in Pakistan</h2>
+        <p class="section-subtitle">
+          From dramatic jagged Karakoram massifs and turquoise glacial lakes to golden Arabian coastline dunes and ancient forts.
+        </p>
+      </header>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs-wrapper">
+        <button class="filter-tab-btn active" data-filter="all">All Destinations</button>
+        <button class="filter-tab-btn" data-filter="mountains">⛰️ Mountain Peaks</button>
+        <button class="filter-tab-btn" data-filter="valleys">🌲 Emerald Valleys</button>
+        <button class="filter-tab-btn" data-filter="lakes">💧 Glacial Lakes</button>
+        <button class="filter-tab-btn" data-filter="coastal">🏖️ Coastal & Deserts</button>
+      </div>
+
+      <!-- Destinations Grid -->
+      <div class="destinations-grid" id="destinationsGridContainer">
+        <!-- Rendered dynamically by app.js from PAKISTAN_DATA.destinations -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. LUXURY HOTELS & RESORTS
+       ========================================================================= -->
+  <section class="section section-alt" id="hotels">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-badge"><span>🏨</span> World-Class Hospitality</div>
+        <h2 class="section-title">Premier <span>Hotels & Resorts</span></h2>
+        <p class="section-subtitle">
+          Experience world-renowned Pakistani hospitality in 5-star royal palaces, scenic alpine chalets, and beachfront urban resorts.
+        </p>
+      </header>
+
+      <!-- City Selector Filter for Hotels -->
+      <div style="display:flex; justify-content:center; align-items:center; gap:0.75rem; margin-bottom:2.5rem; flex-wrap:wrap;">
+        <span style="font-size:0.875rem; font-weight:700; color:var(--pk-green-900);">Filter by City:</span>
+        <select id="hotelCityFilter" class="calc-select" style="max-width:240px; padding:0.5rem 1rem;">
+          <option value="all">All Cities & Regions</option>
+          <option value="islamabad">Islamabad</option>
+          <option value="lahore">Lahore</option>
+          <option value="karachi">Karachi</option>
+          <option value="peshawar">Peshawar</option>
+          <option value="skardu">Skardu</option>
+          <option value="hunza">Hunza Valley</option>
+          <option value="swat">Swat Valley</option>
+          <option value="murree">Murree & Galyat</option>
+          <option value="multan">Multan</option>
+          <option value="quetta">Quetta</option>
+        </select>
+      </div>
+
+      <!-- Hotels Grid -->
+      <div class="hotels-grid" id="hotelsGridContainer">
+        <!-- Rendered dynamically by app.js from PAKISTAN_DATA.hotels -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. TRAVEL BUDGET CALCULATOR
+       ========================================================================= -->
+  <section class="section" id="calculator">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-badge"><span>💰</span> Smart Trip Planner</div>
+        <h2 class="section-title">Travel <span>Budget Calculator</span></h2>
+        <p class="section-subtitle">
+          Customize your dream Pakistani itinerary and instantly calculate realistic accommodation, meals, transport, and guide expenses.
+        </p>
+      </header>
+
+      <div class="budget-calculator-card">
+        <div class="calculator-grid">
+          <!-- Inputs Pane -->
+          <div class="calc-inputs-pane">
+            <div class="calc-form-group">
+              <label class="calc-label" for="calcDestination">
+                <span>1. Select Region / Route</span>
+              </label>
+              <select id="calcDestination" class="calc-select">
+                <option value="golden-triangle">Golden Triangle (Islamabad, Lahore & Karachi)</option>
+                <option value="hunza-valley">Hunza Valley & Karakoram Highway</option>
+                <option value="skardu-shangrila">Skardu, Deosai Plains & Shangrila</option>
+                <option value="fairy-meadows">Fairy Meadows & Nanga Parbat</option>
+                <option value="swat-valley">Swat Valley & Malam Jabba Ski Resort</option>
+                <option value="all-pakistan">Grand Pakistan Explorer (North to South)</option>
+              </select>
+            </div>
+
+            <div class="calc-form-group">
+              <div class="calc-label">
+                <span>2. Trip Duration</span>
+                <span id="calcDaysDisplay" style="color:var(--pk-green-700); font-weight:800;">7 Days</span>
+              </div>
+              <input type="range" id="calcDaysSlider" class="calc-range-slider" min="3" max="21" value="7" step="1">
+              <div class="calc-range-labels">
+                <span>3 Days</span>
+                <span>7 Days</span>
+                <span>14 Days</span>
+                <span>21 Days</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="calc-form-group" style="margin-bottom:0;">
+                <label class="calc-label" for="calcTravelers">3. Travelers</label>
+                <select id="calcTravelers" class="calc-select">
+                  <option value="1">Solo Traveler (1 Person)</option>
+                  <option value="2" selected>Couple / Pair (2 People)</option>
+                  <option value="3">Small Group (3 People)</option>
+                  <option value="4">Family / Friends (4 People)</option>
+                  <option value="6">Group (6 People)</option>
+                </select>
+              </div>
+
+              <div class="calc-form-group" style="margin-bottom:0;">
+                <label class="calc-label" for="calcTransport">4. Transport Preference</label>
+                <select id="calcTransport" class="calc-select">
+                  <option value="private-car" selected>Chauffeured AC Sedan (Toyota GLi)</option>
+                  <option value="suv-flights">Domestic Flights + 4x4 Prado SUV</option>
+                  <option value="public">Luxury Intercity AC Motorcoach (Daewoo)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="calc-form-group" style="margin-top:1.5rem;">
+              <label class="calc-label">5. Travel Comfort Level</label>
+              <div class="travel-style-selector">
+                <div class="style-radio-card" data-style="budget">
+                  <div class="style-icon">🎒</div>
+                  <div class="style-title">Backpacker</div>
+                  <div class="style-hint">Guest Houses & Local Cafes</div>
+                </div>
+                <div class="style-radio-card active" data-style="comfort">
+                  <div class="style-icon">🌟</div>
+                  <div class="style-title">Standard Comfort</div>
+                  <div class="style-hint">3-4 Star Hotels & Private Driver</div>
+                </div>
+                <div class="style-radio-card" data-style="luxury">
+                  <div class="style-icon">👑</div>
+                  <div class="style-title">5-Star Luxury</div>
+                  <div class="style-hint">Serena / PC Resorts & VIP Guide</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Pane -->
+          <div class="calc-results-pane">
+            <div>
+              <div class="calc-total-box">
+                <div class="calc-total-caption">Estimated Total Trip Cost</div>
+                <div class="calc-total-amount" id="calcGrandTotal">₨ 184,000</div>
+                <div class="calc-total-usd" id="calcTotalUSD">≈ $662 USD</div>
+              </div>
+
+              <div class="calc-breakdown-list">
+                <div>
+                  <div class="breakdown-row">
+                    <span class="breakdown-label">🏨 Accommodation:</span>
+                    <span class="breakdown-val" id="calcAccomVal">₨ 56,000</span>
+                  </div>
+                  <div class="breakdown-bar"><div class="breakdown-bar-fill" id="barAccom" style="width:30%;"></div></div>
+                </div>
+
+                <div>
+                  <div class="breakdown-row">
+                    <span class="breakdown-label">🍲 Food & Dining:</span>
+                    <span class="breakdown-val" id="calcFoodVal">₨ 35,000</span>
+                  </div>
+                  <div class="breakdown-bar"><div class="breakdown-bar-fill" id="barFood" style="width:20%;"></div></div>
+                </div>
+
+                <div>
+                  <div class="breakdown-row">
+                    <span class="breakdown-label">🚗 Transportation:</span>
+                    <span class="breakdown-val" id="calcTransportVal">₨ 56,000</span>
+                  </div>
+                  <div class="breakdown-bar"><div class="breakdown-bar-fill" id="barTransport" style="width:30%;"></div></div>
+                </div>
+
+                <div>
+                  <div class="breakdown-row">
+                    <span class="breakdown-label">🎟️ Tickets & Excursions:</span>
+                    <span class="breakdown-val" id="calcActivitiesVal">₨ 21,000</span>
+                  </div>
+                  <div class="breakdown-bar"><div class="breakdown-bar-fill" id="barActivities" style="width:15%;"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-gold" id="bookCalculatedTripBtn" style="width:100%; padding:0.95rem; font-size:1rem;">
+              <span>📝</span> Book This Custom Itinerary
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. COMPREHENSIVE TRAVEL GUIDE
+       ========================================================================= -->
+  <section class="section section-alt" id="guide">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-badge"><span>📘</span> Essential Tips</div>
+        <h2 class="section-title">Pakistan <span>Travel Guide</span></h2>
+        <p class="section-subtitle">
+          Everything international and domestic travelers need to know for a seamless, enjoyable, and safe journey across Pakistan.
+        </p>
+      </header>
+
+      <!-- Key Guide Pillars -->
+      <div class="guide-tabs-container">
+        <div class="guide-feature-box">
+          <div class="guide-icon-badge">🛂</div>
+          <h3 class="guide-box-title">Pakistan E-Visa Guide</h3>
+          <p class="guide-box-text">
+            Citizens of 191 countries can obtain an official tourist e-visa online via the Nadra portal (visa.nadra.gov.pk). Processing takes 48 to 72 hours with basic passport scans and hotel reservation slips. Over 120 nations qualify for Visa on Arrival.
+          </p>
+        </div>
+
+        <div class="guide-feature-box">
+          <div class="guide-icon-badge">💵</div>
+          <h3 class="guide-box-title">Currency & Payments</h3>
+          <p class="guide-box-text">
+            The Pakistani Rupee (PKR) is the official currency. Major credit cards (Visa & MasterCard) work seamlessly in hotels, malls, and restaurants in Islamabad, Lahore, and Karachi. Carry cash for northern valley bazaars, fruit stalls, and tips.
+          </p>
+        </div>
+
+        <div class="guide-feature-box">
+          <div class="guide-icon-badge">🤝</div>
+          <h3 class="guide-box-title">Culture & Etiquette</h3>
+          <p class="guide-box-text">
+            Pakistani people are renowned for hospitality, often treating tourists as honored guests. Modest dress covering shoulders and knees is customary. A scarf or shawl is helpful for women when entering sacred mosques like Badshahi or Faisal Mosque.
+          </p>
+        </div>
+      </div>
+
+      <!-- Best Seasons Grid -->
+      <h3 style="font-family:var(--font-heading); font-size:1.6rem; font-weight:800; text-align:center; margin-bottom:1.5rem;">
+        Best Time to Visit
+      </h3>
+      <div class="seasons-grid">
+        <div class="season-card">
+          <div class="season-emoji">🌸</div>
+          <h4 class="season-title">Spring (Mar - Apr)</h4>
+          <span class="season-badge">Blossom Season</span>
+          <p class="season-desc">Apricot, cherry, and almond blooms across Hunza and Swat. Mild, sunny weather.</p>
+        </div>
+
+        <div class="season-card">
+          <div class="season-emoji">☀️</div>
+          <h4 class="season-title">Summer (May - Aug)</h4>
+          <span class="season-badge">High Trekking</span>
+          <p class="season-desc">Prime season for high Karakoram passes, Fairy Meadows, K2 base camp, and Babusar Pass.</p>
+        </div>
+
+        <div class="season-card">
+          <div class="season-emoji">🍁</div>
+          <h4 class="season-title">Autumn (Sep - Nov)</h4>
+          <span class="season-badge">Golden Foliage</span>
+          <p class="season-desc">Spectacular golden and crimson poplar leaves around northern lakes with crystal clear mountain vistas.</p>
+        </div>
+
+        <div class="season-card">
+          <div class="season-emoji">❄️</div>
+          <h4 class="season-title">Winter (Dec - Feb)</h4>
+          <span class="season-badge">Cultural & Skiing</span>
+          <p class="season-desc">Delightful cool weather for exploring Karachi, Lahore, and Islamabad; skiing at Malam Jabba, Swat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. IMAGE GALLERY & LIGHTBOX
+       ========================================================================= -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-badge"><span>📸</span> Visual Odyssey</div>
+        <h2 class="section-title">Pakistan <span>Image Gallery</span></h2>
+        <p class="section-subtitle">
+          Glimpse the breathtaking contrasts of snow-capped granite spires, centuries-old Mughal architecture, and sun-kissed coastlines.
+        </p>
+      </header>
+
+      <!-- Gallery Category Filters -->
+      <div class="filter-tabs-wrapper">
+        <button class="filter-tab-btn gallery-filter-btn active" data-gallery-filter="all">All Photos</button>
+        <button class="filter-tab-btn gallery-filter-btn" data-gallery-filter="architecture">🕌 Architecture & Heritage</button>
+        <button class="filter-tab-btn gallery-filter-btn" data-gallery-filter="mountains">⛰️ Mountains & Peaks</button>
+        <button class="filter-tab-btn gallery-filter-btn" data-gallery-filter="lakes">💧 Glacial Lakes</button>
+        <button class="filter-tab-btn gallery-filter-btn" data-gallery-filter="coastal">🌊 Arabian Coastline</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGridContainer">
+        <!-- Rendered dynamically by app.js from PAKISTAN_DATA.gallery -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. CUSTOMER REVIEWS & TRAVEL STORIES
+       ========================================================================= -->
+  <section class="section section-alt" id="reviews">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-badge"><span>💬</span> Real Experiences</div>
+        <h2 class="section-title">What <span>Travelers</span> Say</h2>
+        <p class="section-subtitle">
+          Read authentic testimonials from international explorers and cultural tourists who experienced Pakistan's heartwarming hospitality.
+        </p>
+      </header>
+
+      <!-- Reviews Grid -->
+      <div class="reviews-grid" id="reviewsGridContainer">
+        <!-- Rendered dynamically by app.js from PAKISTAN_DATA.testimonials -->
+      </div>
+
+      <div style="text-align:center; margin-top:3rem;">
+        <button class="btn btn-secondary" id="openReviewModalBtn">
+          <span>✍️</span> Share Your Pakistan Travel Story
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. ABOUT US SECTION
+       ========================================================================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-hero-grid">
+        <div class="about-img-composition">
+          <img src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=900&q=80" alt="Karakoram Mountains of Pakistan" class="about-main-img" loading="lazy">
+          <div class="about-floating-card">
+            <div class="floating-icon">🇵🇰</div>
+            <div class="floating-text">
+              <h4>100% Authentic</h4>
+              <p>Promoting Sustainable Eco-Tourism in Pakistan</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-badge"><span>✨</span> Our Heritage & Mission</div>
+          <h2 class="about-content-heading">
+            Dedicated to Showcasing the <span>True Splendor</span> of Pakistan
+          </h2>
+          <p class="about-lead-text">
+            <strong>Explore Pakistan</strong> is the premier international travel and destination platform created to illuminate the extraordinary natural wonders, profound 5,000-year civilizational heritage, and unmatched hospitality of the Islamic Republic of Pakistan.
+          </p>
+
+          <div class="about-pillars-grid">
+            <div class="about-pillar-item">
+              <div class="pillar-bullet">✓</div>
+              <div class="pillar-info">
+                <h5>Certified Local Guides</h5>
+                <p>Knowledgeable mountaineers, historians, and local cultural experts.</p>
+              </div>
+            </div>
+
+            <div class="about-pillar-item">
+              <div class="pillar-bullet">✓</div>
+              <div class="pillar-info">
+                <h5>Sustainable Eco-Tourism</h5>
+                <p>Committed to preserving delicate Himalayan & Karakoram alpine ecosystems.</p>
+              </div>
+            </div>
+
+            <div class="about-pillar-item">
+              <div class="pillar-bullet">✓</div>
+              <div class="pillar-info">
+                <h5>Safety & Support</h5>
+                <p>24/7 dedicated tourist helpline and concierge across all provinces.</p>
+              </div>
+            </div>
+
+            <div class="about-pillar-item">
+              <div class="pillar-bullet">✓</div>
+              <div class="pillar-info">
+                <h5>Verified Luxury Stays</h5>
+                <p>Handpicked heritage forts, lakeside chalets, and 5-star urban retreats.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">
+            Connect With Our Travel Concierge ➔
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. CONTACT US & FAQS
+       ========================================================================= -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <header class="section-header">
+        <div class="section-badge"><span>✉️</span> Get in Touch</div>
+        <h2 class="section-title">Plan Your <span>Pakistan Journey</span></h2>
+        <p class="section-subtitle">
+          Have questions about visas, customized itineraries, hotel reservations, or seasonal recommendations? Our travel specialists are here 24/7.
+        </p>
+      </header>
+
+      <div class="contact-grid">
+        <!-- Interactive Contact Form -->
+        <div class="contact-form-card">
+          <h3 class="form-title">Send an Inquiry</h3>
+          <p class="form-subtitle">Fill out your tour preferences and we will curate a personalized travel itinerary within 24 hours.</p>
+
+          <form id="mainContactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Full Name *</label>
+                <input type="text" id="contactName" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email Address *</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="sarah@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contactCountry">Country of Residence</label>
+                <input type="text" id="contactCountry" class="form-control" placeholder="e.g. United Kingdom">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactDestinationSelect">Primary Destination</label>
+                <select id="contactDestinationSelect" class="form-control">
+                  <option value="karachi">Karachi Coastal Experience</option>
+                  <option value="lahore">Lahore Cultural & Food Tour</option>
+                  <option value="islamabad">Islamabad Capital & Margalla</option>
+                  <option value="hunza">Hunza Valley & Karakoram</option>
+                  <option value="skardu">Skardu & Deosai Plains</option>
+                  <option value="full-tour">Comprehensive All-Pakistan Tour</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Your Travel Dates & Preferences *</label>
+              <textarea id="contactMessage" class="form-control" placeholder="Tell us about your expected travel dates, group size, and any special interests (hiking, food, historical photography)..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; padding:0.95rem;">
+              Send Travel Inquiry ➔
+            </button>
+          </form>
+        </div>
+
+        <!-- Info & FAQ Accordion -->
+        <div class="contact-info-pane">
+          <div class="office-card">
+            <div class="office-icon">📍</div>
+            <div class="office-text">
+              <h4>Islamabad Head Office</h4>
+              <p>Blue Area, Sector F-6, Islamabad Capital Territory, Pakistan</p>
+            </div>
+          </div>
+
+          <div class="office-card">
+            <div class="office-icon">🏢</div>
+            <div class="office-text">
+              <h4>Lahore Cultural Desk</h4>
+              <p>M.M. Alam Road, Gulberg III, Lahore, Punjab, Pakistan</p>
+            </div>
+          </div>
+
+          <div class="office-card">
+            <div class="office-icon">🌊</div>
+            <div class="office-text">
+              <h4>Karachi Coastal Hub</h4>
+              <p>Clifton Block 4, Karachi, Sindh, Pakistan</p>
+            </div>
+          </div>
+
+          <!-- FAQ Accordion -->
+          <div>
+            <h4 style="font-family:var(--font-heading); font-size:1.25rem; font-weight:700; margin-bottom:1rem;">
+              Frequently Asked Questions
+            </h4>
+            <div class="faq-accordion" id="faqAccordionContainer">
+              <!-- Rendered dynamically by app.js from PAKISTAN_DATA.faqs -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="color:#ffffff; margin-bottom:1rem;">
+            <div class="logo-badge">🇵🇰</div>
+            <div class="brand-text">Explore<span>Pakistan</span></div>
+          </div>
+          <p>
+            The premier portal promoting Pakistan's sublime alpine landscapes, vibrant historic metropolises, rich culinary heritage, and world-renowned hospitality.
+          </p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram" aria-label="Instagram">📸</a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube" aria-label="YouTube">▶️</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook" aria-label="Facebook">📘</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Twitter" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Explore Cities</h4>
+          <ul class="footer-links">
+            <li><a href="#cities" onclick="setTimeout(()=>openCityModal('karachi'), 300)">Karachi (City of Lights)</a></li>
+            <li><a href="#cities" onclick="setTimeout(()=>openCityModal('lahore'), 300)">Lahore (Cultural Capital)</a></li>
+            <li><a href="#cities" onclick="setTimeout(()=>openCityModal('islamabad'), 300)">Islamabad (Green Capital)</a></li>
+            <li><a href="#destinations">Hunza & Passu Cones</a></li>
+            <li><a href="#destinations">Skardu & Deosai</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#hotels">Hotels & Resorts</a></li>
+            <li><a href="#calculator">Budget Calculator</a></li>
+            <li><a href="#guide">Tourist Visa & Guide</a></li>
+            <li><a href="#gallery">Photo Gallery</a></li>
+            <li><a href="#about">About Our Mission</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column newsletter-box">
+          <h4>Stay Inspired</h4>
+          <p>Subscribe for seasonal travel guides, festival dates, and exclusive hotel discounts across Pakistan.</p>
+          <form id="newsletterForm" class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your email..." required>
+            <button type="submit" class="btn btn-primary" style="padding:0.65rem 1rem;">Join</button>
+          </form>
+          <div style="font-size:0.75rem; color:rgba(255,255,255,0.5); margin-top:0.65rem;">
+            🔒 We respect your privacy. Unsubscribe anytime.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Explore Pakistan 🇵🇰. All Rights Reserved. Designed with passion for Pakistan Tourism.
+        </div>
+        <div>
+          Official Tourist Helpline: <strong>1422</strong> | Emergency: <strong>1122</strong>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS & DIALOGS
+       ========================================================================= -->
+
+  <!-- 1. City Details Modal (Deep Dive into Karachi, Lahore, Islamabad) -->
+  <div class="modal-backdrop" id="cityModalBackdrop">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeCityModalBtn" aria-label="Close modal">✕</button>
+      <div id="cityModalContent">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Hotel Reservation Modal -->
+  <div class="modal-backdrop" id="hotelModalBackdrop">
+    <div class="modal-card" style="max-width:680px;">
+      <button class="modal-close-btn" id="closeHotelModalBtn" aria-label="Close modal">✕</button>
+      <div id="hotelModalContent">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Add Review Modal -->
+  <div class="modal-backdrop" id="reviewModalBackdrop">
+    <div class="modal-card" style="max-width:540px;">
+      <button class="modal-close-btn" id="closeReviewModalBtn" aria-label="Close modal">✕</button>
+      <div style="padding:2.5rem;">
+        <h3 class="form-title">Share Your Experience</h3>
+        <p class="form-subtitle">Help fellow global tourists discover the warm hospitality and wonders of Pakistan.</p>
+        <form id="reviewForm">
+          <div class="form-group">
+            <label class="form-label" for="reviewAuthorName">Your Full Name *</label>
+            <input type="text" id="reviewAuthorName" class="form-control" required placeholder="e.g. John Doe">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reviewAuthorCountry">Your Country *</label>
+            <input type="text" id="reviewAuthorCountry" class="form-control" required placeholder="e.g. Canada">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reviewAuthorVisited">Places You Visited</label>
+            <input type="text" id="reviewAuthorVisited" class="form-control" placeholder="e.g. Lahore & Hunza Valley">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="reviewAuthorQuote">Your Travel Story / Review *</label>
+            <textarea id="reviewAuthorQuote" class="form-control" required placeholder="Share what touched your heart about Pakistan's places, people, and food..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; padding:0.9rem;">
+            Publish Review ✓
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. High-Res Image Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="modal-close-btn" id="closeLightboxBtn" style="top:2rem; right:2rem;">✕</button>
+    <button class="lightbox-prev" id="lightboxPrevBtn" aria-label="Previous photo">❮</button>
+    <div class="lightbox-content">
+      <img src="" alt="Enlarged photo" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption">
+        <h4 id="lightboxTitle"></h4>
+        <p id="lightboxDesc"></p>
+      </div>
+    </div>
+    <button class="lightbox-next" id="lightboxNextBtn" aria-label="Next photo">❯</button>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript Files -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
